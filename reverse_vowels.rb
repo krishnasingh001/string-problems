@@ -9,9 +9,9 @@ class ReverseVowels
     i, j = 0, vowel_indices.size - 1
 
     while i < j
-        input[vowel_indices[i]], input[vowel_indices[j]] = input[vowel_indices[j]], input[vowel_indices[i]]
-        i += 1
-        j -= 1
+      input[vowel_indices[i]], input[vowel_indices[j]] = input[vowel_indices[j]], input[vowel_indices[i]]
+      i += 1
+      j -= 1
     end
     input
   end

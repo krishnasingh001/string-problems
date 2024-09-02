@@ -7,20 +7,19 @@ class TreeNode
     @right = right
   end
 
-	def largest_values(root)
+  def largest_values(root)
     return [] if root.nil?
 
     result = []
     queue = [root]
-    
+
     while !queue.empty?
       result << queue.map(&:val).max
 
-       queue = queue.flat_map do |node|
-         [node.left, node.right].compact
-       end
+      queue = queue.flat_map do |node|
+        [node.left, node.right].compact
+      end
     end
-    
     result
-	end
+  end
 end
